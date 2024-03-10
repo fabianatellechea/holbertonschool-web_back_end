@@ -40,6 +40,7 @@ class Server:
         return self.__indexed_dataset
 
     def get_hyper_index(self, index: int = None, page_size: int = 10) -> Dict:
+        """Deletion-resilient hypermedia pagination"""
         dataset = self.indexed_dataset()
         data_list = []
         for data_index in dataset:
